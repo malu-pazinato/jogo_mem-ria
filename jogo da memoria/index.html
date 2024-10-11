@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo da Memória</h1>
+        <div class="menu">
+            <label for="game-mode">Modo de Jogo:</label>
+            <select id="game-mode">
+                <option value="solo">Solo</option>
+                <option value="duo">Dupla</option>
+            </select>
+
+            <label for="difficulty">Nível de Dificuldade:</label>
+            <select id="difficulty">
+                <option value="easy">Fácil</option>
+                <option value="medium">Médio</option>
+                <option value="hard">Difícil</option>
+            </select>
+            <button id="start-game">Iniciar Jogo</button>
+        </div>
+
+        <div class="game-board" id="game-board">
+            <!-- Cartas serão geradas aqui -->
+        </div>
+
+        <div class="status">
+            <p>Erros: <span id="error-counter">0</span></p>
+            <p>Tempo: <span id="timer">0</span> segundos</p>
+            <p id="current-player" class="hidden">Jogador Atual: <span id="player-name"></span></p>
+        </div>
+
+        <div id="victory-message" class="hidden">
+            <p id="winner-message"></p>
+        </div>
+
+        <h2>Histórico de Jogos</h2>
+        <table id="game-history">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Modo</th>
+                    <th>Nível</th>
+                    <th>Tempo</th>
+                    <th>Jogador 1 Pontuação</th>
+                    <th>Jogador 2 Pontuação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Histórico será inserido aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

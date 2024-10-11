@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe6f2; /* Rosa claro de fundo */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #ff66b2; /* Título rosa */
+}
+
+.menu {
+    margin-bottom: 20px;
+}
+
+label {
+    color: #ff66b2;
+    font-weight: bold;
+}
+
+select, button {
+    background-color: #ff99cc;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4da6;
+}
+
+select {
+    cursor: pointer;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #ff66b2; /* Cor inicial das cartas */
+    color: transparent; /* Inicialmente escondemos o texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card.flipped {
+    background-color: #fff;
+    color: #ff66b2;
+}
+
+/* Mostrar texto ao virar */
+.card.flipped::after {
+    content: attr(data-value); /* Pega o valor da carta */
+    color: #ff66b2; /* Cor do texto quando virado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+/* Ocultar o texto padrão */
+.card::after {
+    content: ""; /* Não exibe nada antes de ser virado */
+}
+
+.status {
+    margin-top: 20px;
+    color: #ff66b2;
+}
+
+#current-player {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ff99cc;
+}
+
+thead {
+    background-color: #ff66b2;
+    color: white;
+}
+
+#victory-message {
+    margin-top: 20px;
+    color: #ff66b2;
+    font-size: 18px;
+    font-weight: bold;
+}
